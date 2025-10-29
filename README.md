@@ -29,15 +29,37 @@ An interactive, privacy-focused PDF chat and retrieval-augmented generation (RAG
 
 ### High-Level Architecture & Flow
 
+### System Flow (Mermaid)
+
 ```mermaid
 flowchart TD
-    A[User Uploads PDF/Asks a Question] -->|Extracts, Chunks, Embeds| B[PDF to Vectors (pdf-vector.py)]
-    B -->|Vectors, Chunks| C[FAISS Index + .pkl File]
-    C -->|User Query| D[Query Embedding (question-vector.py / streamlit_rag_app.py)]
-    D -->|Sem. Search (FAISS)| E[Top-K Chunks Fetch]
-    E -->|Chunks + Query| F[LLM Answer with Source Page Info (Groq API)]
-    F -->|Response + Citation| G[Streamlit UI (streamlit_rag_app.py)]
+    UserUploadPDF --> PDF_Vectorize
+    PDF_Vectorize --> FAISS_Index
+    UserQuery --> Query_Embed
+    Query_Embed --> FAISS_Index
+    FAISS_Index --> Chunk_Fetch
+    Chunk_Fetch --> LLM_Answer
+    LLM_Answer --> UI_Display
 ```
+
+**Legend:**
+
+| Node          | Description                           |
+|---------------|--------------------------------------|
+| UserUploadPDF | User uploads or selects PDF           |
+| PDF_Vectorize | PDF is chunked/embedded with vectors  |
+| FAISS_Index   | Vectors stored in FAISS index         |
+| UserQuery     | User enters query                     |
+| Query_Embed   | Query is embedded into vector space   |
+| Chunk_Fetch   | Top-K similar chunks are retrieved    |
+| LLM_Answer    | Chunks & query sent to Groq LLM       |
+| UI_Display    | Answer and citations shown in UI      |
+
+You can include the above in your README.md, and GitHub will properly render it as a mermaid diagram.[1]
+
+This structure and diagram clarify how each core component interacts, resolve the parse error, and create a rich visual display for users of your repository.[1]
+
+[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/123862666/72271561-28ad-4247-ae6a-b9f9137f92d4/streamlit_rag_app.py)
 
 ***
 
