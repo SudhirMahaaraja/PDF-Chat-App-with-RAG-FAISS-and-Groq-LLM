@@ -55,13 +55,6 @@ flowchart TD
 | LLM_Answer    | Chunks & query sent to Groq LLM       |
 | UI_Display    | Answer and citations shown in UI      |
 
-You can include the above in your README.md, and GitHub will properly render it as a mermaid diagram.[1]
-
-This structure and diagram clarify how each core component interacts, resolve the parse error, and create a rich visual display for users of your repository.[1]
-
-[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/123862666/72271561-28ad-4247-ae6a-b9f9137f92d4/streamlit_rag_app.py)
-
-***
 
 ### Component & Flow Breakdown
 
