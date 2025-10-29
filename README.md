@@ -108,10 +108,4 @@ MIT License (or your choice).
 
 ### Author
 
-Developed by Sudhir (insert preferred contact info).
-
-***
-
-[1](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/123862666/72271561-28ad-4247-ae6a-b9f9137f92d4/streamlit_rag_app.py)
-[2](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/123862666/7eb5b86c-5faa-4f45-9336-fbf48cd17ab5/question-vector.py)
-[3](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/123862666/845d1260-aacc-4c11-ba66-dbc757118a90/pdf-vector.py)
+Developed by Sudhir
